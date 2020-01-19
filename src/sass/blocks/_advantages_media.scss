@@ -1,0 +1,17 @@
+@media (max-width: 1200px) {
+	.advantages {
+		padding: 42px 0 42px 0;
+
+		&__wrapper {
+			margin-top: 34px;
+		}
+
+		&__item-heading {
+			margin-top: 24px;
+		}
+
+		&__item-content {
+			margin: 24px 0 0;
+		}
+	}
+}
