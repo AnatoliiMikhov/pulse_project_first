@@ -23,15 +23,18 @@
 		}
 	}
 
+	&__item-content {
+		width: 280px;
+	}
+
 	&__item-heading {
 		margin-top: 38px;
 	}
 
-	&__item-content {
+	&__item-descr {
 		color: #0d0d0d;
 		font-size: 14px;
 		font-weight: 300;
-		width: 280px;
 		margin-top: 25px;
 
 		a {

@@ -3,3 +3,44 @@
 		background-position: -100px 0;
 	}
 }
+
+@media (max-width: 991px) {
+	.promo {
+		&__heading {
+			font-size: 36px;
+			line-height: 36px;
+		}
+
+		&__subheading {
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.promo {
+		background-position: -180px 0;
+		padding-bottom: 56px;
+
+		&__wrapper {
+			align-items: center;
+			margin-top: 56px;
+		}
+
+		&__heading {
+			font-size: 32px;
+		}
+
+		&__subheading {
+			font-size: 18px;
+			line-height: 18px;
+		}
+
+		&__icons{
+			margin-top: 48px;
+		}
+	}
+
+
+}
