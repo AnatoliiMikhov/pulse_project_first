@@ -11,8 +11,16 @@
 
 		&_call-us {
 			width: 120px;
-			height: 24px;
-			font-size: 10px;
+			height: 28px;
+			font-size: 11px;
+		}
+	}
+}
+
+@media (max-width: 374px){
+	.button{
+		&_main{
+			width: 260px;
 		}
 	}
 }

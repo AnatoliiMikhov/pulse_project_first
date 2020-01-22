@@ -20,3 +20,11 @@
 		}
 	}
 }
+
+@media (max-width: 374px) {
+	.consultation {
+		&__descr {
+			font-size: 13px;
+		}
+	}
+}
