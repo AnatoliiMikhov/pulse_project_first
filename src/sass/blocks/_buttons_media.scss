@@ -5,3 +5,14 @@
 		}
 	}
 }
+
+@media (max-width: 424px) {
+	.button {
+
+		&_call-us {
+			width: 120px;
+			height: 24px;
+			font-size: 10px;
+		}
+	}
+}

@@ -37,10 +37,36 @@
 			line-height: 18px;
 		}
 
-		&__icons{
+		&__icons {
 			margin-top: 48px;
 		}
 	}
+}
 
+@media (max-width: 575px) {
+	.promo {
+		background-position: -280px 0;
 
+		&__wrapper {
+			margin-top: 40px;
+		}
+
+		&__icons {
+			width: 100%;
+			justify-content: space-around;
+		}
+	}
+}
+
+@media (max-width: 424px) {
+	.promo {
+		&__heading {
+			font-size: 24px;
+		}
+
+		&__subheading {
+			font-size: 14px;
+			line-height: 14px;
+		}
+	}
 }

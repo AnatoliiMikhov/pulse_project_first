@@ -20,32 +20,64 @@
 	.advantages {
 		padding: 32px 0 32px 0;
 
-		&__wrapper{
+		&__wrapper {
 			flex-direction: column;
 		}
 
-		&__item{
+		&__item {
 			text-align: center;
 			margin-bottom: 48px;
 		}
 
-		&__icon{
+		&__icon {
 			width: 50px;
 			height: 50px;
 		}
 
-		&__item-content{
+		&__item-content {
 			width: 70%;
 			margin: 0 auto;
 		}
 
-		&__item-heading{
+		&__item-heading {
 			margin-top: 10px;
 		}
 
-		&__item-descr{
+		&__item-descr {
 			margin: 0;
 		}
 	}
+}
 
+@media (max-width: 767px) {
+	.advantages {
+		&__wrapper>div:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 424px) {
+	.advantages {
+		&__wrapper {
+			margin-top: 20px;
+		}
+
+		&__item {
+			margin-bottom: 32px;
+		}
+
+		&__item-content {
+			width: 90%;
+		}
+
+		&__item-heading {
+			margin: 5px 0;
+			font-size: 16px;
+		}
+
+		&__item-descr {
+			font-size: 14px;
+		}
+	}
 }
