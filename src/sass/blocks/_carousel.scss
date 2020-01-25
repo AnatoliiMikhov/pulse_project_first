@@ -59,16 +59,30 @@
 			padding: 0;
 
 			button {
-				font-size: 10px;
+				font-size: 0;
 				line-height: 0;
 				display: block;
 				width: 20px;
 				height: 20px;
 				padding: 5px;
-				background-color: #ccc;
-				border: none;
+				cursor: pointer;
+				color: transparent;
+				border: 0;
 				outline: none;
-				border-radius: 50%;
+				background: transparent;
+
+				&::before {
+					font-size: 30px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 20px;
+					height: 20px;
+					content: '•';
+					text-align: center;
+					opacity: .25;
+					color: black;
+				}
 			}
 		}
 	}

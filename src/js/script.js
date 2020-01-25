@@ -13,13 +13,7 @@ $(document).ready(function () {
 				breakpoint: 768,
 				settings: {
 					dots: true,
-					arrows: false,
-				}
-			},
-			{
-				breakpoint: 375,
-				settings: {
-					dots: false,
+					arrows: false
 				}
 			}
 		]
