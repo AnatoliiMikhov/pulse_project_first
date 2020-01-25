@@ -1,0 +1,48 @@
+@media (max-width: 991px) {
+	.carousel {
+		&__inner {
+			width: 560px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.carousel {
+		padding: 60px 0 60px 0;
+
+		&__inner {
+			width: 500px;
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.carousel {
+		&__inner {
+			width: 380px;
+		}
+	}
+}
+
+@media (max-width: 424px) {
+	.carousel {
+		&__inner {
+			width: 335px;
+		}
+
+		.slick-dots {
+			li {
+				margin: 0 15px;
+			}
+		}
+	}
+}
+
+@media (max-width: 374px) {
+	.carousel {
+		&__inner {
+			width: 320px;
+		}
+	}
+}
