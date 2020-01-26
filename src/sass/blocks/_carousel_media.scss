@@ -1,28 +1,18 @@
+@media (max-width: 1023px) {
+	.carousel {
+
+		.md-hidden {
+			display: none;
+		}
+	}
+}
+
 @media (max-width: 991px) {
 	.carousel {
+		padding: 48px 0 60px 0;
+
 		&__inner {
 			width: 560px;
-		}
-	}
-}
-
-@media (max-width: 767px) {
-	.carousel {
-		padding: 60px 0 60px 0;
-
-		&__inner {
-			width: 100%;
-		}
-	}
-}
-
-@media (max-width: 424px) {
-	.carousel {
-
-		.slick-dots {
-			li {
-				margin: 0 15px;
-			}
 		}
 	}
 }

@@ -5,23 +5,52 @@
 		position: relative;
 		width: 750px;
 		margin: 0 auto;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 
-	.slick-slide {
+	.tns-nav {
+		position: absolute;
+		bottom: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		button {
+			width: 12px;
+			height: 12px;
+			padding: 0;
+			margin: 0 20px;
+			border-radius: 50%;
+			background: #ddd;
+			border: 0;
+			outline: none;
+		}
+
+		.tns-nav-active {
+			background: #aaa;
+		}
+	}
+
+	.tns-item {
 		img {
+			display: block;
+			margin: 0 auto;
 			width: 100%;
 		}
 	}
 
-	.slick-prev,
-	.slick-next {
+	.prev,
+	.next {
 		position: absolute;
-		background-color: #fff;
+		background-color: transparent;
 		width: 50px;
 		height: 50px;
 		padding: 0;
 		border: none;
-		// outline: none;
+		outline: none;
 
 		img {
 			width: 31px;
@@ -29,19 +58,19 @@
 		}
 	}
 
-	.slick-prev {
+	.prev {
 		top: 50%;
 		transform: translateY(-50%);
-		left: -66px;
+		left: -50px;
 	}
 
-	.slick-next {
+	.next {
 		top: 50%;
 		transform: translateY(-50%);
-		right: -66px;
+		right: -50px;
 	}
 
-	.slick-dots {
+	/* 	.slick-dots {
 		list-style: none;
 		position: absolute;
 		bottom: -50px;
@@ -86,5 +115,5 @@
 			}
 		}
 	}
-
+ */
 }
