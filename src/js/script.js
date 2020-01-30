@@ -20,6 +20,7 @@
 	});
 }); */
 
+// Code for tiny-slider START
 const slider = tns({
 	container: '.carousel__inner',
 	items: 1,
@@ -27,9 +28,6 @@ const slider = tns({
 	autoplay: false,
 	controls: false,
 	responsive: {
-		320: {
-			nav: true,
-		},
 		1024: {
 			nav: false,
 		},
@@ -43,3 +41,6 @@ document.querySelector('.prev').addEventListener('click', function () {
 document.querySelector('.next').addEventListener('click', function () {
 	slider.goTo('next');
 });
+// Code for tiny-slider END
+
+// Code for catalog tabs START
