@@ -29,6 +29,8 @@
 
 @media (max-width: 767px) {
 	.catalog {
+		padding: 20px 0 64px 0;
+
 		&__tab {
 			font-size: 14px;
 			width: 160px;
@@ -56,6 +58,7 @@
 
 @media (max-width: 575px) {
 	.catalog {
+		padding: 20px 0 32px 0;
 
 		&__tabs {
 			flex-direction: column;

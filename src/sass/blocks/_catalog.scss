@@ -85,9 +85,14 @@
 		}
 
 		&__link {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(calc(-50%));
 			display: block;
 			color: $main-color;
 			font-size: 14px;
+			line-height: 13px;
 			font-weight: 500;
 			text-transform: uppercase;
 			text-align: center;
@@ -130,7 +135,7 @@
 
 		&__wrapper {
 			display: flex;
-			width: calc(200% + 40px);
+			width: calc(200%);
 		}
 
 		&__content {
@@ -141,7 +146,6 @@
 
 			&_active {
 				transform: translateX(0%);
-				margin-right: 20px;
 			}
 		}
 
@@ -151,7 +155,7 @@
 			margin-left: 20px;
 			padding-left: 19px;
 			margin-bottom: 0;
-			transform: translateX(0%);
+			transform: translateX(20px);
 			padding-right: 20px;
 			transition: 0.5s all;
 			list-style-type: none;
@@ -184,16 +188,20 @@
 			position: absolute;
 			bottom: 0;
 			left: 50%;
-			transform: translateX(calc(-50% - 19px));
+			transform: translateX(calc(-50% - 9px));
 			display: block;
 			color: $main-color;
 			font-size: 14px;
+			line-height: 13px;
 			font-weight: 500;
-			text-decoration: underline;
 			text-transform: uppercase;
+			text-decoration: none;
+			border-bottom: 1px solid red;
+			width: max-content;
 
 			&:hover {
 				color: $main-color;
+				text-decoration: none;
 			}
 		}
 	}
