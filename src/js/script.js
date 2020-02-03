@@ -1,25 +1,3 @@
-/* $(document).ready(function () {
-	$(".carousel__inner").slick({
-		speed: 300,
-		slidesToShow: 1,
-		//autoplay: true,
-		//autoplaySpeed: 2000,
-		// adaptiveHeight: true,
-		prevArrow: '<button type="button" class="slick-prev"><img src="img/icons/left-arrow.svg"></button>',
-		nextArrow: '<button type="button" class="slick-next"><img src="img/icons/right-arrow.svg"></button>',
-
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					dots: true,
-					arrows: false
-				}
-			}
-		]
-	});
-}); */
-
 // Code for tiny-slider START
 const slider = tns({
 	container: '.carousel__inner',
@@ -42,12 +20,9 @@ document.querySelector('.next').addEventListener('click', function () {
 	slider.goTo('next');
 });
 // Code for tiny-slider END
-
-// Code for catalog tabs START
-//(function ($) {
 $(document).ready(function () {
 	$(function () {
-		// Tabs script
+		// Code for catalog tabs START
 		$('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
 			$(this)
 				.addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -68,6 +43,7 @@ $(document).ready(function () {
 
 		toggleSlide('.catalog-item__link');
 		toggleSlide('.catalog-item__back');
+		// Code for catalog tabs END
 
 		// Modal windows script
 		$('[data-modal=consultation').on('click', function () {
