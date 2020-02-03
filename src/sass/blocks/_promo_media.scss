@@ -70,3 +70,12 @@
 		}
 	}
 }
+
+@media (max-width: 374px) {
+	.promo {
+
+		&__wrapper {
+			margin-top: 20px;
+		}
+	}
+}

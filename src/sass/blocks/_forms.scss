@@ -21,6 +21,10 @@
 		}
 	}
 
+	&_modal {
+		margin-top: 25px;
+	}
+
 	// for Chrome hidden arrow input number
 	input[type="number"]::-webkit-outer-spin-button,
 	input[type="number"]::-webkit-inner-spin-button {

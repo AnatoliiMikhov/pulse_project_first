@@ -24,10 +24,25 @@
 		&__official {
 			span {
 				font-size: 16px;
+				line-height: 2rem;
 			}
 		}
-		&__phone{
+
+		&__phone {
 			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 374px) {
+	.header {
+		&__content {
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&__contacts {
+			align-items: center;
 		}
 	}
 }
