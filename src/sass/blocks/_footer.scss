@@ -31,7 +31,6 @@
 
 		&:hover {
 			color: #ffffff;
-			text-decoration: none;
 		}
 	}
 
@@ -49,8 +48,12 @@
 		height: 50px;
 		border: 2px solid #ffffff;
 		border-radius: 50%;
-		margin: 0 30px;
+		margin: 0 20px;
 		color: #ffffff;
 		font-size: 24px;
+
+		&:hover {
+			border: 3px solid #2d24ad;
+		}
 	}
 }

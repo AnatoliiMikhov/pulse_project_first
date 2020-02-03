@@ -6,6 +6,11 @@
 	font-weight: 500;
 	text-transform: uppercase;
 
+	&:hover {
+		box-shadow: 3px 3px 5px rgba($color: $main-color, $alpha: 0.5);
+		background-image: linear-gradient(to bottom, #c90c0c, #c80023, #c50034, #bf0043, #b70050);
+	}
+
 	&_call-us {
 		width: 150px;
 		height: 30px;
