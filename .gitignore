@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+#mailer
+/src/mailer
+
 # testing
 /coverage
 

@@ -52,7 +52,6 @@ $(document).ready(function () {
 	// script to close modal windows
 	$('.modal__close').on('click', function () {
 		$('.overlay, #consultation, #order, #thanks').fadeOut('slow'); // closes windows
-		document.location.reload(); // reloads page
 	});
 
 	// получаем и вставляем текст в элемент с классом '.className'
@@ -97,5 +96,28 @@ $(document).ready(function () {
 
 	// Input masked plugin code
 	$("input[name=phone]").mask("+ 380 (99) 999-9999");
+
+
+	// script to send mail
+	// use phpmailer
+	$('form').submit(function (e) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function () {
+			$(this).find("input").val("");
+			$('#consultation, #order').fadeOut();
+			$('.overlay, #thanks').fadeIn('fast');
+
+
+			$('form').trigger('reset');
+		});
+		return false;
+	});
 	
+
+	// up page link script
+
 });
