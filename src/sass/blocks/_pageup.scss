@@ -1,12 +1,12 @@
 .pageup {
-	display: block;
+	display: none;
 	position: fixed;
-	bottom: 40px;
-	right: 40px;
+	bottom: 110px;
+	right: 0;
 	z-index: 100;
 
 	i {
-		color: $main-color;
+		color: rgba($color: $main-color, $alpha: 0.3);
 		font-size: 40px;
 	}
 }

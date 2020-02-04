@@ -116,8 +116,20 @@ $(document).ready(function () {
 		});
 		return false;
 	});
-	
 
-	// up page link script
 
+	// up page link script and smooth scroll
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 1800) {
+			$('.pageup').fadeIn();
+		} else {
+			$('.pageup').fadeOut();
+		}
+	});
+	// smooth scroll
+	$("a[href^='#']").click(function () {
+		let _href = $(this).attr("href");
+		$("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+		return false;
+	});
 });
