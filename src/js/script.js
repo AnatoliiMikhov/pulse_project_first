@@ -46,13 +46,13 @@ $(document).ready(function () {
 
 	// Modal windows script
 	$('[data-modal=consultation').on('click', function () {
-		$('.overlay, #consultation').fadeIn('100');
+		$('.overlay, #consultation').fadeIn('100'); // opens windows
 	});
 
 	// script to close modal windows
 	$('.modal__close').on('click', function () {
-		$('.overlay, #consultation, #order, #thanks').fadeOut('slow');
-		document.location.reload();// reload page
+		$('.overlay, #consultation, #order, #thanks').fadeOut('slow'); // closes windows
+		document.location.reload(); // reloads page
 	});
 
 	// получаем и вставляем текст в элемент с классом '.className'
@@ -94,4 +94,8 @@ $(document).ready(function () {
 	validatorForms('#consultation-form');
 	validatorForms('#consultation .feed-form');
 	validatorForms('#order .feed-form');
+
+	// Input masked plugin code
+	$("input[name=phone]").mask("+ 380 (99) 999-9999");
+	
 });
