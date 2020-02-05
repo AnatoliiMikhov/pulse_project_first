@@ -20,6 +20,7 @@ document.querySelector('.next').addEventListener('click', function () {
 	slider.goTo('next');
 });
 // Code for tiny-slider END
+// jQuery library
 $(document).ready(function () {
 	// Code for catalog tabs START
 	$('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
@@ -133,3 +134,6 @@ $(document).ready(function () {
 		return false;
 	});
 });
+
+// animation libraries
+new WOW().init();
