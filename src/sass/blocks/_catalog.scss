@@ -24,7 +24,7 @@
 		transform: skewX(-25deg);
 		margin: 0 10px;
 		cursor: pointer;
-		transition: 0.5 all;
+		transition: 0.5s all;
 
 		&:hover {
 			box-shadow: 2px 2px 5px $main-color;
@@ -158,11 +158,17 @@
 			transform: translateX(20px);
 			padding-right: 20px;
 			transition: 0.5s all;
-			list-style-type: none;
+			
 
 			&_active {
 				transform: translateX(-100%);
 				margin-left: 0;
+			}
+
+			ul {
+				padding-left: 0;
+				margin-bottom: 0;
+				list-style: none;
 			}
 
 			li {
