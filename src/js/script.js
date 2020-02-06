@@ -11,7 +11,7 @@ const slider = tns({
 		},
 	}
 });
-
+// for slider buttons
 document.querySelector('.prev').addEventListener('click', function () {
 	slider.goTo('prev');
 });
