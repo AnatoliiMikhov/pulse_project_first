@@ -75,7 +75,9 @@ gulp.task('watch', function () {
 	gulp.watch("src/*.html").on('change', gulp.parallel('html'));
 });
 
-gulp.task('default', gulp.parallel('watch', 'styles', 'server', 'html', 'favicon', 'scripts', 'fonts', 'mailer', 'images'));
+// gulp.task('default', gulp.parallel('styles', 'html', 'favicon', 'scripts', 'fonts', 'mailer', 'images', 'watch', 'server'));
+
+gulp.task('default', gulp.parallel('html', 'styles', 'fonts', 'images', 'favicon', 'scripts', 'mailer', 'watch', 'server'));
 
 
 //exports.default = minify_images;
