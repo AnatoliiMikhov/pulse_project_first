@@ -62,22 +62,9 @@ gulp.task('images', function () {
 		.pipe(gulp.dest("dist/img"));
 });
 
-//function minify_images() {
-	//return gulp.src("src/img/**/*")
-		//.pipe(imagemin())
-		//.pipe(gulp.dest("dist/img"));
-//}
-
-
-
 gulp.task('watch', function () {
 	gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
 	gulp.watch("src/*.html").on('change', gulp.parallel('html'));
 });
 
-// gulp.task('default', gulp.parallel('styles', 'html', 'favicon', 'scripts', 'fonts', 'mailer', 'images', 'watch', 'server'));
-
 gulp.task('default', gulp.parallel('html', 'styles', 'fonts', 'images', 'favicon', 'scripts', 'mailer', 'watch', 'server'));
-
-
-//exports.default = minify_images;
