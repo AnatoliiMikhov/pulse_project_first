@@ -1,15 +1,19 @@
+const { series } = require('gulp');
+const { parallel } = require('gulp');
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
+const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
 
 gulp.task('server', function () {
 
 	browserSync({
 		server: {
-			baseDir: "src"
+			baseDir: "dist"
 		}
 	});
 
@@ -22,12 +26,56 @@ gulp.task('styles', function () {
 		.pipe(rename({ suffix: '.min', prefix: '' }))
 		.pipe(autoprefixer())
 		.pipe(cleanCSS({ compatibility: 'ie8' }))
-		.pipe(gulp.dest("src/css"))
+		.pipe(gulp.dest("dist/css"))
 		.pipe(browserSync.stream());
 });
 
-gulp.task('watch', function () {
-	gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
+gulp.task('html', function () {
+	return gulp.src('src/*.html')
+		.pipe(htmlmin({ collapseWhitespace: true }))
+		.pipe(gulp.dest('dist/'));
 });
 
-gulp.task('default', gulp.parallel('watch', 'styles', 'server'));
+gulp.task('favicon', function () {
+	return gulp.src('src/favicon.ico')
+		.pipe(gulp.dest('dist/'));
+});
+
+gulp.task('scripts', function () {
+	return gulp.src("src/js/**/*js")
+		.pipe(gulp.dest("dist/js"));
+});
+
+gulp.task('fonts', function () {
+	return gulp.src("src/fonts/**/*")
+		.pipe(gulp.dest("dist/fonts"));
+});
+
+gulp.task('mailer', function () {
+	return gulp.src("src/mailer/**/*")
+		.pipe(gulp.dest("dist/mailer"));
+});
+
+gulp.task('images', function () {
+	return gulp.src("src/img/**/*")
+		.pipe(imagemin())
+		.pipe(gulp.dest("dist/img"));
+});
+
+//function minify_images() {
+	//return gulp.src("src/img/**/*")
+		//.pipe(imagemin())
+		//.pipe(gulp.dest("dist/img"));
+//}
+
+
+
+gulp.task('watch', function () {
+	gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
+	gulp.watch("src/*.html").on('change', gulp.parallel('html'));
+});
+
+gulp.task('default', gulp.parallel('watch', 'styles', 'server', 'html', 'favicon', 'scripts', 'fonts', 'mailer', 'images'));
+
+
+//exports.default = minify_images;
